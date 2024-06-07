@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-RAAW Inflow Benchmark
-=====================
+Rotor Inflow Benchmark
+======================
 
 .. figure:: ./images/illustration.png
   :align: center
@@ -66,7 +66,7 @@ We provide a recommendation for the two parameters of the exponential coherence 
    - :math:`u_m` is the wind speed averaged over time and over the two points separated by :math:`r`
    - :math:`b_k` is a scaling parameter (assumed to be :math:`b_k=0.12/L` in IEC 61400-1, where :math:`L` is the flow length scale; here it is fit to measurements instead)
 
-The :math:`a_K` and :math:`b_K` provided here are are obtained by computing the magnitude-squared coherence between every possible combination of pairs of anemometers on the meteorological tower. There are 21 possible combinations ranging in vertical separation between 4 m and 127 m. The calculations are based on 1-Hz time series of wind speeds over a four-hour period centered on the shorter period of interest, which is on the order of 10 minutes. The Davenport coherence model is then fit to each of the magnitude-squared coherence functions calculated from the measurements, leading to 21 values for the coherence parameters. The :math:`a_K` and :math:`B_K` pair that yields the lowest error for the largest amount of separation distances is then selected and provided as a recommendation.
+The :math:`a_K` and :math:`b_K` provided here are are obtained by computing the magnitude-squared coherence between every possible combination of pairs of anemometers on the meteorological tower. There are 21 possible combinations ranging in vertical separation between 4 m and 127 m. The calculations are based on 1-Hz time series of wind speeds over a four-hour period centered on the shorter period of interest, which is on the order of 10 minutes. The Davenport coherence model is then fit to each of the magnitude-squared coherence functions calculated from the measurements, leading to 21 values for the coherence parameters. The :math:`a_K` and :math:`b_K` pair that yields the lowest error for the largest amount of separation distances is then selected and provided as a recommendation.
 
 **Pointwise turbulence**
 
