@@ -6,7 +6,7 @@
 RAAW Inflow Benchmark
 =====================
 
-.. figure:: ../images/illustration.png
+.. figure:: ./images/illustration.png
   :align: center
 
 *Figure: Illustration of the RAAW field experiment*
@@ -57,16 +57,16 @@ Measurement source: anemometers on meteorological tower
 
 We provide a recommendation for the two parameters of the exponential coherence model implemented in the IEC 61400-1, i.e. :math:`a_k` and :math:`b_k` from:
 
-   :math:`\gamma = \exp \left[ -a_k \sqrt{\left( \frac{fr}{u_m} \right)^2 + \left( B_K r\right)^2} \right]` where
+   :math:`\gamma = \exp \left[ -a_k \sqrt{\left( \frac{fr}{u_m} \right)^2 + \left( b_K r\right)^2} \right]` where
 
    - :math:`\gamma` is the magnitude-squared coherence
    - :math:`a_k` is the decrement parameter (assumed to be :math:`a_k=12` in IEC 61400-1; here it is fit to the measurements instead)
    - :math:`f` is the frequency
    - :math:`r` is the separation distance
    - :math:`u_m` is the wind speed averaged over time and over the two points separated by :math:`r`
-   - :math:`b_k` is 0.12/L
+   - :math:`b_k` is a scaling parameter (assumed to be :math:`b_k=0.12/L` in IEC 61400-1, where :math:`L` is the flow length scale; here it is fit to measurements instead)
 
-The :math:`a_K` and :math:`B_K` provided here are are obtained by computing the magnitude-squared coherence between every possible combination of pairs of anemometers on the meteorological tower. There are 21 possible combinations ranging in vertical separation between 4 m and 127 m. The calculations are based on 1-Hz time series of wind speeds over a four-hour period centered on the shorter period of interest, which is on the order of 10 minutes. The Davenport coherence model is then fit to each of the magnitude-squared coherence functions calculated from the measurements, leading to 21 values for the coherence parameters. The :math:`a_K` and :math:`B_K` pair that yields the lowest error for the largest amount of separation distances is then selected and provided as a recommendation.
+The :math:`a_K` and :math:`b_K` provided here are are obtained by computing the magnitude-squared coherence between every possible combination of pairs of anemometers on the meteorological tower. There are 21 possible combinations ranging in vertical separation between 4 m and 127 m. The calculations are based on 1-Hz time series of wind speeds over a four-hour period centered on the shorter period of interest, which is on the order of 10 minutes. The Davenport coherence model is then fit to each of the magnitude-squared coherence functions calculated from the measurements, leading to 21 values for the coherence parameters. The :math:`a_K` and :math:`B_K` pair that yields the lowest error for the largest amount of separation distances is then selected and provided as a recommendation.
 
 **Pointwise turbulence**
 
