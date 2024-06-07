@@ -9,7 +9,7 @@ Rotor Inflow Benchmark
 .. figure:: ./images/illustration.png
   :align: center
 
-*Figure: Illustration of the RAAW field experiment*
+*Figure: Illustration of the RAAW field experiment showing measurements described below.*
 
    
 Data Provided
