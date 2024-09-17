@@ -91,6 +91,8 @@ Data provided
 
 The ``UVW`` measurement is intended to provide modelers with sufficient turbulence data to derive any parameters specific to their model which are not covered by the information provided in ``NL``, ``GL``, and ``COH``.
 
+.. _data_requested:
+
 Data Requested
 ^^^^^^^^^^^^^^
 
@@ -113,9 +115,9 @@ Modelers are requested to:
 
 - Exactly match the time-lateral longitudinal wind constraints (``NL`` data)
 
-- Exactly match the time-averaged wind direction and speed profile constraints (``GL`` data)
+- Exactly match the time-averaged wind speed profile using the power-law exponent provided for each case
 
-- Generate 6 different inflows for each time period (to address uncertainties related to model stochasticity)
+- Generate :math:`\geq 6` different inflows for each time period (to address uncertainties related to model stochasticity)
 
 **Guidelines on deviating from data request:**
 
@@ -143,8 +145,3 @@ A right-hand coordinate system is defined:
   :align: center
 
 *Figure: Schematic of coordinate system, which is defined according to the time-averaged yaw heading for each 704-second period.*
-
-Data Access
-^^^^^^^^^^^
-
-Link to data download forthcoming.
