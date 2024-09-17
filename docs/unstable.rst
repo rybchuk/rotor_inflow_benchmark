@@ -3,16 +3,17 @@
 Unstable Benchmarks
 -------------------
 
+This page gives information specifc to the Unstable Benchmarks. Information that applies to the rotor inflow benchmarks in general is found in :ref:`Data Description <data_description>`.
+
 Modeling Instructions
 ^^^^^^^^^^^^^^^^^^^^^
 
 This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://iea-wind.org/task57/>`_.
 
-1. Download the constraint data for the three cases
+1. Download the constraint data for the three cases in :ref:`Data Access <data_access>`
 
 2. Generate :math:`\geq 6` inflows for each case
-    - Ensure the inflows follow the constraint at the correct locations according to coordinates and dimensions found in the constraint file
-    - If possible, enforce a time-averaged vertical wind shear based on the power-law exponent provided in the Table below
+    - If possible, enforce a time-averaged vertical wind shear based on the power-law exponent provided in the table below and inside each constraint file as an attribute
     - Details on the requested data apply to all benchmarks and are found in :ref:`Data Requested <data_requested>`
 
 3. Upload the 18 inflows to the provided box link
@@ -109,14 +110,35 @@ Notes on the values provided above:
 
 *Figure: Measured and fit magnitude-squared coherence. The fit uses the* :math:`a_K` *and* :math:`b_K` *parameters provided above, which were obtained by fitting the 73-meter-separation measured coherence function.*
 
+.. _data_access:
 
 Data Access
 ^^^^^^^^^^^
 
+Find the constraints for each of the periods on `Zenodo <https://zenodo.org/records/13769729>`_. 
+
+- One file per case (1500, 1530 and 1600)
+
+- Each file is ~130 MB
+
+- Each file contains an ``xarray.DataArray`` that looks like:
+
+.. figure:: ./images/DataArray.png
+  :align: center
+
+The data inside each file is shown below for each of the periods.
+
 .. figure:: ./images/constraint_NL_1500_ens26.png
   :align: center
 
-*Figure: Hub-height longitudinal wind constraint for case 1500.*
+*(a) 1500*
 
+.. figure:: ./images/constraint_NL_1530_ens18.png
+  :align: center
 
-Link to data download forthcoming.
+*(b) 1530*
+
+.. figure:: ./images/constraint_NL_1600_ens19.png
+  :align: center
+
+*(c) 1600*

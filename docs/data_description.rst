@@ -3,6 +3,8 @@
 Detailed Data Description
 -------------------------
 
+The information provided here applies to all rotor inflow benchmarks (i.e. the :ref:`Unstable Benchmark <unstable>` and other forthcoming ones).
+
 Data provided
 ^^^^^^^^^^^^^
 
