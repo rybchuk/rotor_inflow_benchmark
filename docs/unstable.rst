@@ -1,23 +1,41 @@
-.. _cases:
+.. _unstable:
 
 Unstable Benchmarks
 -------------------
 
-Each benchmark case refers to an individual 704-second period measured in the field.
+This page gives information specifc to the Unstable Benchmarks. Information that applies to the rotor inflow benchmarks in general is found in :ref:`Data Description <data_description>`.
 
-.. Overview of benchmark cases. The freestream, hub wind speed and turbulence intensity values given below are obtained from the ``NL`` measurement. The freestream, hub wind direction values given below are obtained from the `GL` measurement. 
-.. table:: Table: Unstable benchmark cases.
+Modeling Instructions
+^^^^^^^^^^^^^^^^^^^^^
+
+This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://iea-wind.org/task57/>`_.
+
+1. Download the constraint data for the three cases in :ref:`Data Access <data_access>`
+
+2. Generate :math:`\geq 6` inflows for each case
+    - If possible, enforce a time-averaged vertical wind shear based on the power-law exponent provided in the table below and inside each constraint file as an attribute
+    - Details on the requested data apply to all benchmarks and are found in :ref:`Data Requested <data_requested>`
+
+3. Upload the 18 inflows to the provided box link
+
+
+Case Description
+^^^^^^^^^^^^^^^^
+
+Each benchmark case refers to an individual 704-second period measured in the field. For the unstable benchmark, we will consider three such periods observed within a window of less than two hours. Therefore the three periods are similar in terms of atmospheric conditions, but different enough in terms of dynamics. We consider three periods to add variation and build confidence in the results.
+
+.. table:: *Table: Unstable benchmark cases. With the exception of the rows in* **bold**, *the information below is not meant to be used in the simulations.*
 
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    |                                       | 1500                                       | 1530                                       | 1600                                        |
-    +=======================================+============================================+============================================+=============================================+
+    | Case identifier                       | 1500                                       | 1530                                       | 1600                                        |
+    +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Date of period                        | July 24, 2023                              | July 24, 2023                              | July 24, 2023                               |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Start of period                       | 15:00:25 UTC                               | 15:30:25 UTC                               | 16:00:25 UTC                                |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | End of period                         | 15:12:08 UTC                               | 15:42:08 UTC                               | 16:12:08 UTC                                | 
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    | Freestream wind speed                 | 9.3 m s :math:`^{-1}`                      | 8.6 m s :math:`^{-1}`                      | 8.8 m s :math:`^{-1}`                       |
+    | Freestream wind speed                 | 9.2 m s :math:`^{-1}`                      | 8.6 m s :math:`^{-1}`                      | 8.9 m s :math:`^{-1}`                       |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Advection time to turbine             | 41 s                                       | 44 s                                       | 43 s                                        |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
@@ -29,7 +47,7 @@ Each benchmark case refers to an individual 704-second period measured in the fi
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Rotor-layer shear                     | 0.68 m s :math:`^{-1}`                     | -0.21 m s :math:`^{-1}`                    | 0.78 m s :math:`^{-1}`                      |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    | Power law exponent                    | 0.096                                      | 0.010                                      | 0.071                                       |      
+    | **Power law exponent**                | 0.1                                        | 0.01                                       | 0.07                                        |      
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Rotor-layer veer                      | -4.4 deg                                   | 1.0 deg                                    | 5.0 deg                                     |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
@@ -41,9 +59,9 @@ Each benchmark case refers to an individual 704-second period measured in the fi
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Hub-height density                    | 1.029 kg m :math:`^{-3}`                   | 1.026 kg m :math:`^{-3}`                   | 1.023 kg m :math:`^{-3}`                    |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    | Coherence decrement parameter         | 21.64                                      | 21.64                                      | 21.64                                       |
+    | **Coherence decrement parameter**     | 21.64                                      | 21.64                                      | 21.64                                       |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    | Coherence scaling parameter           | 2.5 :math:`\times 10^{-4}` m :math:`^{-1}` | 2.5 :math:`\times 10^{-4}` m :math:`^{-1}` | 2.5 :math:`\times 10^{-4}` m :math:`^{-1}`  |
+    | **Coherence scaling parameter**       | 2.5 :math:`\times 10^{-4}` m :math:`^{-1}` | 2.5 :math:`\times 10^{-4}` m :math:`^{-1}` | 2.5 :math:`\times 10^{-4}` m :math:`^{-1}`  |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
 
 
@@ -90,4 +108,37 @@ Notes on the values provided above:
 .. figure:: ./images/coh_chosen.png
   :align: center
 
-*Figure: Measured and fit magnitude-squared coherence. The fit uses the* :math:`a_K` *and* :math:`b_K` *parameters provided above, which were obtained by fitting the 73-meter separation coherence function.*
+*Figure: Measured and fit magnitude-squared coherence. The fit uses the* :math:`a_K` *and* :math:`b_K` *parameters provided above, which were obtained by fitting the 73-meter-separation measured coherence function.*
+
+.. _data_access:
+
+Data Access
+^^^^^^^^^^^
+
+Find the constraints for each of the periods on `Zenodo <https://zenodo.org/records/13769729>`_. 
+
+- One file per case (1500, 1530 and 1600)
+
+- Each file is ~130 MB
+
+- Each file contains an ``xarray.DataArray`` that looks like:
+
+.. figure:: ./images/DataArray.png
+  :align: center
+
+The data inside each file is shown below for each of the periods.
+
+.. figure:: ./images/constraint_NL_1500_ens26.png
+  :align: center
+
+*(a) 1500*
+
+.. figure:: ./images/constraint_NL_1530_ens18.png
+  :align: center
+
+*(b) 1530*
+
+.. figure:: ./images/constraint_NL_1600_ens19.png
+  :align: center
+
+*(c) 1600*
