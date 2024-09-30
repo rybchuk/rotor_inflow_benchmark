@@ -28,7 +28,7 @@ Data provided
       - Discretization: :math:`dt=1` s 
       - Size: :math:`n_t=704` 
    - :math:`x=-381` is the longitudinal (along-wind) coordinate [m] 
-   - :math:`y \in [-150,150]` is the lateral (cross-wind) coordinate [m]
+   - :math:`y \in [-100,100]` is the lateral (cross-wind) coordinate [m]
       - Discretization: :math:`dy=10` m
       - Size: :math:`n_y=31` 
    - :math:`z=120` is the vertical (ground-normal) coordinate [m]
@@ -155,7 +155,7 @@ Please submit your data in netcdf format with appropriately named and dimensione
 Coordinate System
 ^^^^^^^^^^^^^^^^^
 
-A right-hand coordinate system is defined: 
+A left-handed coordinate system is defined: 
 
 - Origin: wind turbine tower base
 - Longitudinal (:math:`x`) coordinate: parallel to the ground and to the time-averaged nacelle heading for each 704-second period

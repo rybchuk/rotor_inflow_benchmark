@@ -30,7 +30,7 @@ Models extrapolate above and below the constraint. The flow fields are validated
 Validation against Reference Simulations
 ****************************************
 
-If you would like to see how your model compares to a reference dataset, we recommend performing this optional parallel validation study.
+If you would like to see how your model compares to a reference large-eddy simulation dataset where the ground truth flow fields are known in full detail, we recommend performing this optional parallel validation study. To make this optional study easy to conduct, the simulation constraint data (``LES``) are formatted identically to the measurement constraint data (``NL``).
 
 In this study, models extrapolate above and below the constraint. The flow fields are validated against reference simulation flow data and used to drive loads simulations. Simulated loads are validated against the loads produced when simulations are driven with the reference flow data. This parallel validation study **complements the validation against field measurements** by circumventing measurement uncertainties and instead validating against ground truth from a reference large-eddy simulation (LES).
 
