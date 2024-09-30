@@ -58,7 +58,9 @@ When?
 
 The :ref:`Unstable Benchmarks <unstable>` follow the schedule below:
 
-☑ October - December 2024: modelers simulate inflow planes
+☑ October 2024: benchmark is released
+
+☐ October - December 2024: modelers simulate inflow planes
 
 ☐ December 2024: modelers submit inflow planes to benchmark lead
 
