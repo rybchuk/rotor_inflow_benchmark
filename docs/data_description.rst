@@ -166,3 +166,4 @@ A left-handed coordinate system is defined:
   :align: center
 
 *Figure: Schematic of coordinate system, which is defined according to the time-averaged yaw heading for each 704-second period.*
+
