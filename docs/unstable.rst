@@ -8,23 +8,36 @@ This page gives information specifc to the Unstable Benchmarks. Information that
 Modeling Instructions
 ^^^^^^^^^^^^^^^^^^^^^
 
-This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://iea-wind.org/task57/>`_.
+Perform steps 1--3 twice: one for the validation against field measurements, and one for the validation against reference simulation data.
 
 1. Download the constraint data for the three cases in :ref:`Data Access <data_access>`
 
 2. Generate :math:`\geq 6` inflows for each case
-    - If possible, enforce a time-averaged vertical wind shear based on the power-law exponent provided in the table below and inside each constraint file as an attribute
-    - Details on the requested data apply to all benchmarks and are found in :ref:`Data Requested <data_requested>`
 
-3. Upload the 18 inflows to the provided box link
+  - Details on the requested data (what to submit) apply to all benchmarks (not just the unstable one described here) and are found in :ref:`Data Requested <data_requested>`
 
+  - If applicable, use the coherence parameters provided in the table below. Note that they are the same for the three cases.
 
-Case Description
-^^^^^^^^^^^^^^^^
+3. Upload the :math:`\geq 18` inflows to the provided box link 
+
+  - Link is provided upon signing up to the benchmark
+
+.. figure:: ./images/benchmarks_requested.png
+  :align: center
+
+Shear and veer instructions
+***************************
+
+  - For the validation against measurements, use the power-law exponent and veer provided in the table below. The same values are also provided in each  netcdf constraint file as an attribute.
+
+  - For the validation against measurements, use 
+
+The Three Measurement Periods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each benchmark case refers to an individual 704-second period measured in the field. For the unstable benchmark, we will consider three such periods observed within a window of less than two hours. Therefore the three periods are similar in terms of atmospheric conditions, but different enough in terms of dynamics. We consider three periods to add variation and build confidence in the results.
 
-.. table:: *Table: Unstable benchmark cases. With the exception of the rows in* **bold**, *the information below is not meant to be used in the simulations.*
+.. table:: *Table: Unstable benchmark cases. With the exception of the rows in* **bold**, *the information below is* **not** *meant to be used in the simulations.*
 
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Case identifier                       | 1500                                       | 1530                                       | 1600                                        |
@@ -49,7 +62,7 @@ Each benchmark case refers to an individual 704-second period measured in the fi
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | **Power law exponent**                | 0.1                                        | 0.01                                       | 0.07                                        |      
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    | Rotor-layer veer                      | -4.4 deg                                   | 1.0 deg                                    | 5.0 deg                                     |
+    | **Rotor-layer veer**                  | -4.4 deg                                   | 1.0 deg                                    | 5.0 deg                                     |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Near-surface kinematic heat flux      | 0.152 K m s :math:`^{-1}`                  | 0.192 K m s :math:`^{-1}`                  | 0.198 K m s :math:`^{-1}`                   |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
@@ -81,13 +94,13 @@ Each benchmark case refers to an individual 704-second period measured in the fi
            <figcaption style="text-align: center;">(c)</figcaption>
        </figure>
    </div>
-   <figcaption style="text-align: left; font-style: italic;">Figure: Time-averages vertical profiles of wind speed as measured by multiple instruments, and best-fit power law using exponents provided above.</figcaption>
+   <figcaption style="text-align: left; font-style: italic;">Figure: Time-averaged vertical profiles of wind speed as measured by multiple instruments, and best-fit power law using exponents provided above.</figcaption>
 
 Notes on the values provided above:
 
 
-- The freestream wind speed above is the hub-height, time-averaged, laterally-averaged longitudinal velocity as derived from the nacelle-mounted scanning lidar and therefore corresponds to the single-value average of the ``NL`` dataset provided as a constraint. We use the ``NL`` here to be consistent with the data that will be provided. Other estimates of the mean freestream wind speed are available from the meteorological tower and ground-based profiling lidar, but those measure a parcel of air that is off to the side for these prevailing wind direction and therefore differ slightly from the lidar-measured values.
-- The freestream wind direction above combines the hub-height, time-averaged wind direction measured by the meteorological tower wind vane and the ground-based profiling lidar. One estimate is available for each instrument, and the average of the two values is provided above. We use the vane and profiling lidar because they are more accurate estimate of wind direction than the nacelle-based scanning lidar.
+- The freestream wind speed above is the hub-height, time-averaged, laterally-averaged longitudinal velocity as derived from the nacelle-mounted scanning lidar and therefore corresponds to the single-value average of the ``NL`` dataset provided as a constraint. We use the ``NL`` here to be consistent with the data that is provided as a constraint. Other estimates of the mean freestream wind speed are available from the meteorological tower and ground-based profiling lidar, but those measure a parcel of air that is off to the side for these prevailing wind directions and therefore differ slightly from the lidar-measured values.
+- The freestream wind direction above combines the hub-height, time-averaged wind direction measured by the meteorological tower wind vane and the ground-based profiling lidar at the same height. One estimate is available for each instrument, and the average of the two values is provided above. We use the vane and profiling lidar because they are more accurate estimates of wind direction than the nacelle-based scanning lidar.
 - The nacelle heading above is a time average considering 704 seconds of SCADA data starting :math:`t_{adv}` s later where  :math:`t_{adv}` is the advection time provided above, computed as :math:`3D/\overline{u}` (with :math:`3D=381` m and :math:`\overline{u}` being the wind speed values provided above).
 - The freestrem turbulence intensity above is computed similarly to the wind direction. It combines the hub-height values from the meteorological tower and the ground-based profiling lidar. One estimate is available for each instrument, and the average of the two values is provided above.
 - The rotor layer shear above is the difference between the time-averaged wind speeds at the rotor top (184 m) and rotor bottom (56 m) as measured by the ground-based profiling lidar.
@@ -96,7 +109,7 @@ Notes on the values provided above:
 - The heat flux above is obtained from the 2.5-meter temperature and vertical velocity ultrasonic measurements, considering a 30-minute window for the Reynolds averaging.
 - The Obukhov length above utilizes the value of heat flux provided, friction velocities estimated from the same instrument and using the same methodology as was employed for the heat flux calculation, and the time-averaged,  2-meter air temperature for the reference temperature.
 - The stability parameter is simply the inverse of the Obukhov length multiplied by the measurement height of 2.5 m.
-- The hub height density considers dry air and vapor and is obtained from vapor pressure and saturation vapor pressure estimates derived from the hub-height pressure, temperature and relative humidity measurements at the meteorological tower.
+- The hub-height density considers dry air and water vapor. It is obtained from vapor pressure and saturation vapor pressure estimates derived from the hub-height air pressure, temperature and relative humidity measurements at the meteorological tower.
 - The coherence parameters (:math:`a_K` and :math:`b_K`) were selected according to the procedures described in :ref:`data_description`. The values that provided the lowest errors for most separation distances were those fit to the measured coherence at a separation of 73 m between the wind speed measurements at 110.5 m and 183.5 m.
 
 .. figure:: ./images/cohfit.png
@@ -110,23 +123,44 @@ Notes on the values provided above:
 
 *Figure: Measured and fit magnitude-squared coherence. The fit uses the* :math:`a_K` *and* :math:`b_K` *parameters provided above, which were obtained by fitting the 73-meter-separation measured coherence function.*
 
+The Three Simulated Periods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The large-eddy simulations performed for this study match the atmospheric conditions measured in the field. In these simulations, we have less control over the time-averaged vertical profiles. Therefore, they do not match exactly the field measurements. Instead, the shear and veer for each of the three simulated cases is provided below. As for the measurement data, the same values are also provided as attributes in the netcdf constraint files.
+
+.. table:: *Table: Shear and veer in the large-eddy simulations of the unstable benchmark cases.*
+
+    +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
+    | Case identifier                       | 1                                          | 2                                          | 3                                           |
+    +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
+    | **Power law exponent**                | 0.07                                       | 0.06                                       | 0.00                                        |      
+    +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
+    | **Rotor-layer veer**                  | -1.4 deg                                   | 1.4 deg                                    | 0.1 deg                                     |
+    +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
+
 .. _data_access:
 
 Data Access
 ^^^^^^^^^^^
 
-Find the constraints for each of the periods on `Zenodo <https://zenodo.org/records/13769729>`_. 
+Find the constraints for each of the periods on `Zenodo <https://zenodo.org/records/13799999>`_. 
 
-- One file per case (1500, 1530 and 1600)
+- One set of files per case (1500, 1530 and 1600 for the measured flows; 1, 2 and 3 for the simulated flows)
 
-- Each file is ~130 MB
-
-- Each file contains an ``xarray.DataArray`` that looks like:
+- Each ``NL`` file contains an ``xarray.DataArray`` that looks like:
 
 .. figure:: ./images/DataArray.png
   :align: center
 
-The data inside each file is shown below for each of the periods.
+- Similarly, each ``LES`` file constains an ``xarray.DataArray`` that looks like:
+
+.. figure:: ./images/DataArray_sims.png
+  :align: center
+
+Sneak peek
+**********
+
+The data inside each ``NL`` file is shown below for each of the three periods.
 
 .. figure:: ./images/constraint_NL_1500_ens26.png
   :align: center

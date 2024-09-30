@@ -3,12 +3,12 @@
 Detailed Data Description
 -------------------------
 
-The information provided here applies to all rotor inflow benchmarks (i.e. the :ref:`Unstable Benchmark <unstable>` and other forthcoming ones).
+The information provided here applies to all rotor inflow benchmarks (i.e. the :ref:`Unstable Benchmarks <unstable>` and other forthcoming ones).
 
 Data provided
 ^^^^^^^^^^^^^
 
-**Constraint Inflow Turbulence**
+**Constraint Inflow Turbulence (Measurements)**
 
 - Identifier: ``NL`` (nacelle lidar)
 
@@ -31,6 +31,25 @@ Data provided
    - :math:`y \in [-150,150]` is the lateral (cross-wind) coordinate [m]
       - Discretization: :math:`dy=10` m
       - Size: :math:`n_y=31` 
+   - :math:`z=120` is the vertical (ground-normal) coordinate [m]
+
+**Constraint Inflow Turbulence (Simulations)**
+
+- Identifier: ``LES`` (large-eddy simulation)
+
+- Instrument source: N/A (not a measurement)
+
+- Upstream processing: N/A
+
+- Description: Time series of longitudinal wind velocity as a function of lateral coordinate, i.e. :math:`u(t,y)` where: 
+   - :math:`u` is the longitudinal wind velocity [m s :math:`^{-1}`]
+   - :math:`t \in [0,720]` is the time coordinate [s]
+      - Discretization: :math:`dt=1` s 
+      - Size: :math:`n_t=720` 
+   - :math:`x=-381` is the longitudinal (along-wind) coordinate [m] 
+   - :math:`y \in [-120,120]` is the lateral (cross-wind) coordinate [m]
+      - Discretization: :math:`dy=10` m
+      - Size: :math:`n_y=25` 
    - :math:`z=120` is the vertical (ground-normal) coordinate [m]
 
 
