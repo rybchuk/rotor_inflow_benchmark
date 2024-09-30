@@ -160,7 +160,7 @@ Find the constraints for each of the periods on `Zenodo <https://zenodo.org/reco
 Sneak peek
 **********
 
-The data inside each ``NL`` file is shown below for each of the three periods.
+The data inside each ``NL`` file is shown below for each of the three measurement periods.
 
 .. figure:: ./images/constraint_NL_1500_ens26.png
   :align: center
@@ -176,3 +176,22 @@ The data inside each ``NL`` file is shown below for each of the three periods.
   :align: center
 
 *(c) 1600*
+
+The data inside each ``LES`` file is shown below for each of the three simulation periods.
+
+.. figure:: ./images/constraint_LES_1.png
+  :align: center
+
+*(a) 1*
+
+.. figure:: ./images/constraint_LES_2.png
+  :align: center
+
+*(b) 2*
+
+.. figure:: ./images/constraint_LES_3.png
+  :align: center
+
+*(c) 3*
+
+
