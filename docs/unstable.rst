@@ -28,16 +28,16 @@ Perform steps 1--3 twice: one for the validation against field measurements, and
 Shear and veer instructions
 ***************************
 
-  - For the validation against measurements, use the power-law exponent and veer provided in the table below. The same values are also provided in each  netcdf constraint file as an attribute.
+  - For the validation against measurements, use the power-law exponent and veer provided in *Table 1* below. The same values are also provided in each ``NL`` netcdf constraint file as an attribute.
 
-  - For the validation against measurements, use 
+  - For the validation against measurements, use the power-law exponent and veer provided in *Table 2* below. The same values are also provided in each ``LES`` netcdf constraint file as an attribute.
 
 The Three Measurement Periods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Each benchmark case refers to an individual 704-second period measured in the field. For the unstable benchmark, we will consider three such periods observed within a window of less than two hours. Therefore the three periods are similar in terms of atmospheric conditions, but different enough in terms of dynamics. We consider three periods to add variation and build confidence in the results.
 
-.. table:: *Table: Unstable benchmark cases. With the exception of the rows in* **bold**, *the information below is* **not** *meant to be used in the simulations.*
+.. table:: *Table 1: Unstable benchmark cases. With the exception of the rows in* **bold**, *the information below is* **not** *meant to be used in the simulations.*
 
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Case identifier                       | 1500                                       | 1530                                       | 1600                                        |
@@ -128,7 +128,7 @@ The Three Simulated Periods
 
 The large-eddy simulations performed for this study match the atmospheric conditions measured in the field. In these simulations, we have less control over the time-averaged vertical profiles. Therefore, they do not match exactly the field measurements. Instead, the shear and veer for each of the three simulated cases is provided below. As for the measurement data, the same values are also provided as attributes in the netcdf constraint files.
 
-.. table:: *Table: Shear and veer in the large-eddy simulations of the unstable benchmark cases.*
+.. table:: *Table 2: Shear and veer in the large-eddy simulations of the unstable benchmark cases.*
 
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | Case identifier                       | 1                                          | 2                                          | 3                                           |
