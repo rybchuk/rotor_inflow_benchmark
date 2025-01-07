@@ -18,9 +18,9 @@ Perform steps 1--3 twice: one for the validation against field measurements, and
 
   - If applicable, use the coherence parameters provided in the table below. Note that they are the same for the three cases.
 
-3. Upload the :math:`\geq 18` inflows to the provided box link 
+3. Upload the :math:`\geq 18` inflows 
 
-  - Link is provided upon signing up to the benchmark
+  - Email alex.rybchuk@nrel.gov to recieve a private Box link
 
 .. figure:: ./images/benchmarks_requested.png
   :align: center
