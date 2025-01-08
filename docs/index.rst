@@ -12,7 +12,7 @@ Rotor Inflow Benchmarks
 
 Current status of this benchmark study: **RELEASED!**   
 
-This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://iea-wind.org/task57/>`_. For questions, contact Paula.Doubrawa@nrel.gov
+This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://iea-wind.org/task57/>`_. For questions, contact alex.rybchuk@nrel.gov
 
 Overview
 ^^^^^^^^
