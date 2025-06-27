@@ -30,7 +30,7 @@ Shear and veer instructions
 
   - For the validation against measurements, use the power-law exponent and veer provided in *Table 1* below. The same values are also provided in each ``NL`` netcdf constraint file as an attribute.
 
-  - For the validation against measurements, use the power-law exponent and veer provided in *Table 2* below. The same values are also provided in each ``LES`` netcdf constraint file as an attribute.
+  - For the validation against LES, use the power-law exponent and veer provided in *Table 2* below. The same values are also provided in each ``LES`` netcdf constraint file as an attribute.
 
 The Three Measurement Periods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

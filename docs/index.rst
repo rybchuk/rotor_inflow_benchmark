@@ -8,7 +8,7 @@ Rotor Inflow Benchmarks
 
    data_description
    unstable
-   complex
+   stable
 
 Current status of this benchmark study: **RELEASED!**   
 
@@ -17,7 +17,7 @@ This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://ie
 Overview
 ^^^^^^^^
 
-The current validation efforts focus on an :ref:`unstable period <unstable>` measured in the field. Two validation studies are conducted in parallel, with the second one being optional.
+The current validation efforts focus on a :ref:`stable period <stable>` measured in the field. Two validation studies are conducted in parallel, with the second one being optional.
 
 Validation against Field Measurements
 *************************************
