@@ -32,6 +32,8 @@ Shear and veer instructions
 
   - For the validation against LES, use the power-law exponent and veer provided in *Table 2* below. The same values are also provided in each ``LES`` netcdf constraint file as an attribute.
 
+  - Positive veer values convey that the flow rotates in a clockwise fashion when increasing in height. In other words, in the turbine coordinate system, positive veer means that the flow has a +y component at the bottom of the rotor and a -y component at the top of the rotor. 
+
 The Three Measurement Periods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -135,7 +137,7 @@ The large-eddy simulations performed for this study match the atmospheric condit
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
     | **Power law exponent**                | 0.07                                       | 0.06                                       | 0.00                                        |      
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
-    | **Rotor-layer veer**                  | -1.4 deg                                   | 1.4 deg                                    | 0.1 deg                                     |
+    | **Rotor-layer veer**                  | 1.4 deg                                    | -1.4 deg                                   | -0.1 deg                                     |
     +---------------------------------------+--------------------------------------------+--------------------------------------------+---------------------------------------------+
 
 .. _data_access:

@@ -155,11 +155,11 @@ Please submit your data in netcdf format with appropriately named and dimensione
 Coordinate System
 ^^^^^^^^^^^^^^^^^
 
-A left-handed coordinate system is defined: 
+A right-handed coordinate system is defined: 
 
 - Origin: wind turbine tower base
-- Longitudinal (:math:`x`) coordinate: parallel to the ground and to the time-averaged nacelle heading for each 704-second period
-- Lateral (:math:`y`) coordinate: parallel to the ground and points from right to left when looking downwind at the rotor
+- Longitudinal (:math:`x`) coordinate: parallel to the ground and to the time-averaged nacelle heading for each 704-second period (+x points downwind)
+- Lateral (:math:`y`) coordinate: parallel to the ground and points from left to right when looking downwind at the rotor
 - Vertical (:math:`z`) coordinate is normal to the ground pointing upwards
 
 .. figure:: ./images/coordinate_system.png
