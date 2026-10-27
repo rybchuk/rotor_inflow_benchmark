@@ -10,14 +10,14 @@ Rotor Inflow Benchmarks
    unstable
    stable
 
-Current status of this benchmark study: **RELEASED!**   
+Current status of this benchmark study: **CONCLUDED!** 
 
-This benchmark is open to all members of the `IEA Wind Task 57 (JAM) <https://iea-wind.org/task57/>`_. For questions, contact alex.rybchuk@nrel.gov
+The results are presented in `"The IEA Wind Task 57 inflow reconstruction benchmark for a single turbine in simple terrain: real-world and synthetic case studies" (Rybchuk et al. 2026) <https://wes.copernicus.org/preprints/wes-2026-77/>`_.
 
 Overview
 ^^^^^^^^
 
-The current validation efforts focus on a :ref:`stable period <stable>` measured in the field. Two validation studies are conducted in parallel, with the second one being optional.
+The benchmark studies the ability of modern turbine inflow models to reconstruct time-varying inflow data over the rotor disk when given hub-height constraint information. The primary motivation is to understand reconstruction skill in the real world, but additional analysis was conducted using high-resolution LES fields as the target data.
 
 Validation against Field Measurements
 *************************************
@@ -60,16 +60,16 @@ The :ref:`Unstable Benchmarks <unstable>` follow the schedule below:
 
 ☑ October 2024: benchmark is released
 
-☐ October - December 2024: modelers simulate inflow planes
+☑ October - December 2024: modelers simulate inflow planes
 
-☐ December 2024: modelers submit inflow planes to benchmark lead
+☑ December 2024: modelers submit inflow planes to benchmark lead
 
-☐ January 2025: benchmark lead performs inflow analyses
+☑ January 2025: benchmark lead performs inflow analyses
 
-☐ January 2025: modelers perform any requested iterations
+☑ January 2025: modelers perform any requested iterations
 
-☐ February 2025: benchmark lead performs aeroelastic simulations
+☑ February 2025: benchmark lead performs aeroelastic simulations
 
-☐ March 2025: benchmark lead shares final results with modelers
+☑ March 2025: benchmark lead shares final results with modelers
 
 The anticipated final product is a **journal publication** containing model development and adoption recommendations.
